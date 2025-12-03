@@ -1,8 +1,24 @@
 ﻿@{
-    ViewData["Title"] = "Home Page";
+    ViewData["Title"] = "Gestión de Clientes";
 }
 
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://learn.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+<h1>Gestión de Clientes</h1>
+
+<div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px;">
+    <!-- Componente 1: Listado (Columna Izquierda) -->
+    <div style="grid-row: 1 / 3;">
+        <div id="componenteListado"></div>
+    </div>
+    
+    <!-- Componente 2: Insertar (Columna Derecha - Arriba) -->
+    <div>
+        <div id="componenteInsertar"></div>
+    </div>
+    
+    <!-- Componente 3: Actualizar/Eliminar (Columna Derecha - Abajo) -->
+    <div>
+        <div id="componenteActualizarEliminar"></div>
+    </div>
 </div>
+
+<script src="~/js/clientes.js"></script>
