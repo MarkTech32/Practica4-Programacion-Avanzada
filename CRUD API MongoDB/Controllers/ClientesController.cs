@@ -1,6 +1,6 @@
 using Microsoft.AspNetCore.Mvc;
 
-namespace MiProyectoMVC.Controllers
+namespace CRUD_API_MongoDB.Controllers
 {
     public class ClientesController : Controller
     {

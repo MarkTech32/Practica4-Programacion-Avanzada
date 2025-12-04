@@ -36,13 +36,21 @@ function obtenerClientes(filtroNombre = '') {
 function mostrarClientes(clientes) {
     const tbody = document.getElementById('tablaClientes');
     tbody.innerHTML = '';
-    
+
     clientes.forEach(cliente => {
+        let idMostrado = cliente._id;
+        if (typeof cliente._id === 'object' && cliente._id !== null) {
+            if (cliente._id.$oid) {
+                idMostrado = cliente._id.$oid;
+            } else {
+                idMostrado = cliente._id.toString(); 
+            }
+        }
         const fila = `
             <tr>
                 <td>${cliente.nombre}</td>
                 <td>${cliente.edad}</td>
-                <td>${cliente._id}</td>
+                <td>${idMostrado}</td>
             </tr>
         `;
         tbody.innerHTML += fila;
